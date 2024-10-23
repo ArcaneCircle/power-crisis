@@ -3,15 +3,19 @@
   "version": "0.0.0",
   "description": "Power Crisis Game",
   "scripts": {
-    "start": "vite",
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
+    "start": "vite --port 3000",
+    "emulator": "concurrently \"npm start\" \"webxdc-dev run http://localhost:3000\"",
+    "fix": "prettier --write .",
+    "check": "prettier --check .",
+    "build": "vite build"
   },
   "license": "MIT",
   "devDependencies": {
-    "typescript": "^5.3.3",
-    "vite": "^5.0.11"
+    "concurrently": "^9.0.1",
+    "prettier": "^3.3.3",
+    "vite": "^5.4.8",
+    "webxdc-dev": "^0.17.0",
+    "webxdc-vite-plugins": "github:webxdc/webxdc-vite-plugins"
   },
   "dependencies": {
     "@types/node": "^20.12.7",

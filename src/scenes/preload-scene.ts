@@ -22,7 +22,6 @@ import SparklingJson from "~/assets/images/sparkling.json";
 import PowerGenPng from "~/assets/images/power-gen.png";
 import PowerGenJson from "~/assets/images/power-gen.json";
 
-import BgmMp3 from "~/assets/audios/bgm.mp3";
 import BgmOgg from "~/assets/audios/bgm.ogg";
 
 export class PreloadScene extends Scene {
@@ -180,7 +179,7 @@ export class PreloadScene extends Scene {
     this.load.atlas(IMAGE_KEYS.POWER_GEN, PowerGenPng, PowerGenJson);
     this.load.image(IMAGE_KEYS.MARKER, "images/marker.png");
 
-    this.load.audio("bgm", [BgmOgg, BgmMp3]);
+    this.load.audio("bgm", [BgmOgg]);
 
     this.load.on("complete", () => {
       this.isAssetsLoaded = true;

@@ -1,18 +1,13 @@
-import path from "path";
+import { buildXDC, eruda, mockWebxdc } from "webxdc-vite-plugins";
 import { defineConfig } from "vite";
+import path from "path";
 
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [],
-  server: {
-    port: 3000,
-  },
-  build: {
-    target: "esnext",
-  },
+  plugins: [buildXDC(), eruda(), mockWebxdc()],
   resolve: {
     alias: {
       "~": path.resolve(__dirname, "./src"),
     },
   },
-  base: "./",
 });

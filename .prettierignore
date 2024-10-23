@@ -1,0 +1,6 @@
+dist
+dist-xdc
+pnpm-lock.yaml
+
+# for now ignore src/ folder to avoid high mantainance cost if upstream changes
+src

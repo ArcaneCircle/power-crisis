@@ -1,47 +1,64 @@
 # Power Crisis
 
-![Cover](/public/cover-github.png)
+![Cover](/public/icon.png)
 
 ![Phaser](https://img.shields.io/badge/phaser-3.70.0-blue?style=for-the-badge)
 
 This is a monopoly-like card game. Use cards to build power plants strategically and manage resources wisely. Powered by Power, this game blends Monopoly-style gameplay with deck-building mechanics. Can you keep the city's lights on lead it to survival?
 
-## Play the game here
+## Contributing
 
-https://itch.io/jam/gamedevjs-2024/rate/2670773
+### Installing Dependencies
 
-## Getting Started for developers
+After cloning this repo, install dependecies:
 
-To get start with this project, follow these steps:
-
-1. Clone the repository to your local machine:
-
-```bash
-git clone https://github.com/leokuo0724/power-crisis.git
+```
+pnpm i
 ```
 
-2. Navigate to the project directory:
+### Checking code format
 
-```bash
-cd power-crisis
+```
+pnpm check
 ```
 
-3. Install dependencies using pnpm:
+### Testing the app in the browser
 
-```bash
-pnpm install
+To test your work in your browser (with hot reloading!) while developing:
+
+```
+pnpm start
+# Alternatively to test in a more advanced WebXDC emulator:
+pnpm emulator
 ```
 
-4. Start the development server:
+### Building
 
-```bash
-pnpm dev
+To package the WebXDC file:
+
+```
+pnpm build
 ```
 
-## Credit
+To package the WebXDC with developer tools inside to debug in Delta Chat, set the `NODE_ENV`
+environment variable to "debug":
 
+```
+NODE_ENV=debug pnpm build
+```
+
+The resulting optimized `.xdc` file is saved in `dist-xdc/` folder.
+
+### Releasing
+
+To automatically build and create a new GitHub release with the `.xdc` file:
+
+```
+git tag -a v1.0.1
+git push origin v1.0.1
+```
+
+## Credits
+
+- This is a port to Webxdc of [power-crisis](https://github.com/leokuo0724/power-crisis) by [leokuo0724](https://github.com/leokuo0724)
 - Game background music -- Slim Shady, from moodmode-studio from [Pixabay](https://pixabay.com/music/beats-slim-shady-174003/)
-
-## Acknowledgments
-
-- Phaser: https://phaser.io/
