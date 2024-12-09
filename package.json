@@ -1,7 +1,6 @@
 {
-  "name": "power-crisis",
-  "version": "0.0.0",
-  "description": "Power Crisis Game",
+  "private": true,
+  "type": "module",
   "scripts": {
     "start": "vite --port 3000",
     "emulator": "concurrently \"npm start\" \"webxdc-dev run http://localhost:3000\"",
@@ -11,14 +10,14 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "concurrently": "^9.0.1",
-    "prettier": "^3.3.3",
-    "vite": "^5.4.8",
-    "webxdc-dev": "^0.17.0",
-    "webxdc-vite-plugins": "github:webxdc/webxdc-vite-plugins"
+    "@webxdc/vite-plugins": "latest",
+    "@webxdc/webxdc-dev": "latest",
+    "concurrently": "latest",
+    "prettier": "latest",
+    "vite": "latest"
   },
   "dependencies": {
-    "@types/node": "^20.12.7",
-    "phaser": "^3.70.0"
+    "@types/node": "^22.10.1",
+    "phaser": "^3.87.0"
   }
 }
